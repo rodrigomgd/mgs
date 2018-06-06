@@ -3,3 +3,17 @@
 body{
     background-color: $cor-bg-1;
 }
+
+.hr-50{
+    background-color: $branco;
+    display: inline-block;
+    width: 100px;
+}
+canvas{
+    position: absolute;
+    z-index: -1;
+}
+
+.white-text{
+    color: $branco;
+}
