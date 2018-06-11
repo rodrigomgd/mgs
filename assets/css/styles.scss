@@ -7,13 +7,38 @@ body{
 .hr-50{
     background-color: $branco;
     display: inline-block;
-    width: 100px;
-}
-canvas{
-    position: absolute;
-    z-index: -1;
+    width: 70px;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
+#particles-js{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        z-index: -1;
+}
 .white-text{
     color: $branco;
+}
+
+.header-social-links{
+    display: inline-flex;
+    justify-content: space-around;
+    transform: rotate(90deg);
+    transition: 0.5s;
+    
+    span{
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+    }
+}
+
+@media(max-width:767px){
+    .header-social-links{
+        margin: auto;
+        transform: rotate(0);
+    }
 }
