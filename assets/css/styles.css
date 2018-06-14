@@ -8,6 +8,11 @@ body {
   margin-right: 1rem;
   margin-left: 1rem; }
 
+.hr-25 {
+  width: 30px;
+  height: 5px;
+  background-color: #f29224; }
+
 #particles-js {
   position: absolute;
   top: 0;

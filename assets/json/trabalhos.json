@@ -1,0 +1,58 @@
+[
+    {
+        "img":"love.png",
+        "alt":"imagem-social-media",
+        "name" : "Social Media",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"computer-graphic.png",
+        "alt":"imagem-web-design",
+        "name" : "Web Design",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"monitor.png",
+        "alt":"imagem-programação",
+        "name" : "Programação",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"mobile.png",
+        "alt":"imagem-seo",
+        "name" : "SEO",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"camera.png",
+        "alt":"imagem-fotografia",
+        "name" : "Fotografia",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"video-player.png",
+        "alt":"imagem-produção-de-vídeos",
+        "name" : "Produção de Vídeos",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"drone.png",
+        "alt":"imagem-drone",
+        "name" : "Imagens de Drone",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    },
+    {
+        "img":"computer.png",
+        "alt":"imagem-google-adwords",
+        "name" : "Google AdWords",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta."
+
+    }
+]
