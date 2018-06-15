@@ -1,0 +1,33 @@
+@font-face{
+    font-family: "Klavika-L-italic";
+    src:url('../fonts/KlavikaLight-Italic.otf');
+    font-weight: italic;
+}
+@font-face{
+    font-family: "Klavika-M-italic";
+    src:url('../fonts/KlavikaMedium-Italic.otf');
+    font-weight: italic;
+}
+@font-face{
+    font-family: "Klavika-CH-bold";
+    src:url('../fonts/KlavikaCH-Bold.otf');
+    font-weight: bold;
+}
+@font-face{
+    font-family: "Klavika-CH-regular";
+    src:url('../fonts/KlavikaCH-Regular.otf');
+    font-weight: normal;
+}
+
+.f-light{
+    font-family: "Klavika-L-italic", Arial, Helvetica, sans-serif;
+}
+.f-medium{
+    font-family: "Klavika-M-italic", Arial, Helvetica, sans-serif;
+}
+.f-bold{
+    font-family: "Klavika-CH-bold", Arial, Helvetica, sans-serif;
+}
+.f-regular{
+    font-family: "Klavika-CH-regular", Arial, Helvetica, sans-serif;
+}

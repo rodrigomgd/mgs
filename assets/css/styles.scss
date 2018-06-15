@@ -1,4 +1,5 @@
-@import 'colors.scss';
+@import 'colors';
+@import 'fonts';
 
 body{
     background-color: $cor-bg-1;
@@ -45,5 +46,42 @@ body{
     .header-social-links{
         margin: auto;
         transform: rotate(0);
+    }
+}
+
+//FORM STYLES
+.form-megusta{
+    
+    input[type="text"], textarea{
+        border-radius: 3rem;
+        border: 0.3rem solid $branco;
+        background-color: transparent;
+        color:$branco;
+        font-size: 1.3rem;
+        &:focus,&::placeholder{
+            background-color: transparent;
+            color:$branco;
+        }
+    }
+    button{
+        border-radius: 3rem;
+        cursor: pointer;
+        padding: 1rem 5rem;
+        margin: 1rem auto;
+
+        &:hover{
+            background-color: darken($branco, 30%);
+        }
+    }
+}
+
+footer{
+    background-color: $preto;
+
+    &:after{
+        content:" ";
+        display: block;
+        background-color: $amarelo-footer;
+        height:0.5rem;
     }
 }

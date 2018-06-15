@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -30,7 +29,7 @@
 </div>
 
 <section class="container pt-5">
-    <div class="row text-center">
+    <div class="row text-center f-light">
         <p class="lead">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, explicabo beatae facere nihil aliquam ullam quibusdam sunt perspiciatis impedit soluta odit sequi asperiores voluptatum modi, praesentium rem nemo neque repellat!Iste laudantium nihil aspernatur pariatur laboriosam harum doloribus deleniti laborum minus eaque consectetur voluptatibus quas perferendis, impedit totam fuga odio! Ullam quas aut tempora expedita distinctio nulla debitis cum quod!
         </p>
@@ -46,9 +45,9 @@
         <?php foreach($trabalhos as $trabalho) : ?>
         <div class="col-md-2 col-sm-4 col-6 mb-5 mr-4 ml-4">
             <img src="<?= get_theme_file_uri('assets/img/'.$trabalho['img']) ?>" alt="<?= $trabalho['alt'] ?>" class="img-fluid p-2">
-            <h3 class="mt-3"><?= $trabalho['name'] ?></h3>
+            <h3 class="mt-3 f-medium"><?= $trabalho['name'] ?></h3>
             <hr class="hr-25">
-            <p>
+            <p class="f-regular">
                 <?= $trabalho['description'] ?>
             </p>
         </div>
@@ -57,33 +56,54 @@
 </section>
 
 <section class="container posts pt-5">
-<h4 class="mt-3 mb-3 text-center">Notícias</h4>
+    <h2 class="mt-3 mb-3 text-center f-bold">Notícias</h2>
     <div class="row justify-content-around">
-
             <?php
                 $args = array( 'numberposts' => '6' );
                 $recent_posts = wp_get_recent_posts( $args ); 
-                foreach( $recent_posts as $recent ): ?>
-                <div class="col-md-4 col-5">
+                foreach( $recent_posts as $recent ): the_post();?>
+                
+                <div class="col-md-4 col-8 mb-4">
                 <?php	if ( has_post_thumbnail( $recent["ID"]) ) {
-                        echo  get_the_post_thumbnail($recent["ID"],array(350,250));
+                        echo  get_the_post_thumbnail($recent["ID"],'large',array("class" => "img-fluid"));
                         }else{ echo "Sem imagem.";} ?>
-                        <p class="entry-title">
-                            <a href="<?= get_permalink($recent['ID']) ?>"><?= $recent['post_title'] ?></a>
-                        </p>
+                            <p><?php the_category(); ?></p>
+                            <a class="f-bold" href="<?= get_permalink($recent['ID']) ?>"><?= $recent['post_title'] ?></a>
+                            <p><?php the_excerpt() ?></p>
+                            <p><?php the_author() ?>, <?php the_date('M Y') ?></p>
                 </div>
             <?php endforeach; wp_reset_query() ?>
         </div>
     </div>
 </section>
 
-<section class="container text-center pt-5">
-    <div class="row d-block">
-        <p>Rua Professor Júlio Gustavo Fehrenbach, 224, Pelotas-RS</p>
-        <p>digital@megusta.com.br</p>
-        <p> +55 53 3342.3413</p>
+<section class="container text-center p-5">
+    <div class="row d-block f-medium">
+        <h3>Rua Professor Júlio Gustavo Fehrenbach, 224, Pelotas-RS</h3>
+        <h3>digital@megusta.com.br</h3>
+        <h3> +55 53 3342.3413</h3>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <h3 class="text-center f-medium pb-4">Entre em contato</h3>
+    <form action="" method="post" class="form-megusta f-light">
+        <div class="row pb-3">
+                <div class="col">
+                    <input type="text" class="form-control p-3 pl-4" placeholder="Nome">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control p-3 pl-4" placeholder="E-mail">
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="8" placeholder="Sua mensagem" class="form-control p-3 pl-4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-light d-block mt-4">Enviar</button>
+        </form>
     </div>
 </section>
 <script src="<?= get_theme_file_uri('assets/js/particles.min.js') ?>"/></script>
 <script src="<?= get_theme_file_uri('assets/js/app.js') ?>"/></script>
 <?php wp_footer(); ?>
+<?php get_footer(); ?>

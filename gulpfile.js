@@ -56,12 +56,21 @@ gulp.task('scripts', () => {
 
   // Gulp task to minify HTML files
 gulp.task('pages', () => {
-   return gulp.src('./*.php')
+   return gulp.src(['./*.php','!./template-parts'])
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
       }))
       .pipe(gulp.dest('dist'));
+  });
+
+gulp.task('pages-2', () => {
+   return gulp.src('./template-parts')
+      .pipe(htmlmin({
+        collapseWhitespace: true,
+        removeComments: true
+      }))
+      .pipe(gulp.dest('dist/template-parts'));
   });
 
   // Clean output directory
@@ -73,6 +82,7 @@ gulp.task('default', ['clean'], () => {
     'styles',
     'scripts',
     'pages',
+    'pages-2',
     'images'
   );
 });
