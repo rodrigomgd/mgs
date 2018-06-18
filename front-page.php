@@ -67,10 +67,10 @@
                 <?php	if ( has_post_thumbnail( $recent["ID"]) ) {
                         echo  get_the_post_thumbnail($recent["ID"],'large',array("class" => "img-fluid"));
                         }else{ echo "Sem imagem.";} ?>
-                            <p><?php the_category(); ?></p>
-                            <a class="f-bold" href="<?= get_permalink($recent['ID']) ?>"><?= $recent['post_title'] ?></a>
-                            <p><?php the_excerpt() ?></p>
-                            <p><?php the_author() ?>, <?php the_date('M Y') ?></p>
+                            <?php the_category(); ?>
+                            <a class="f-bold posts-link" href="<?= get_permalink($recent['ID']) ?>"><?= $recent['post_title'] ?></a>
+                            <?php the_excerpt(array("class"=>"f-medium")) ?>
+                            <p class="text-muted f-medium"><?php the_author() ?>, <?php the_date('M Y') ?></p>
                 </div>
             <?php endforeach; wp_reset_query() ?>
         </div>
@@ -87,23 +87,26 @@
 
 <section class="container mb-5">
     <h3 class="text-center f-medium pb-4">Entre em contato</h3>
-    <form action="" method="post" class="form-megusta f-light">
-        <div class="row pb-3">
-                <div class="col">
-                    <input type="text" class="form-control p-3 pl-4" placeholder="Nome">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form action="<?= get_theme_file_uri('mail.php') ?>" method="post" class="form-megusta f-light">
+                <div class="row pb-3">
+                    <div class="col-sm mb-3">
+                        <input type="text" name="name" class="form-control p-3 pl-4" placeholder="Nome" required>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <input type="text" name="email" class="form-control p-3 pl-4" placeholder="E-mail" required>
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="text" class="form-control p-3 pl-4" placeholder="E-mail">
+                <div class="form-group">
+                    <textarea id="" name="message" cols="30" rows="8" placeholder="Sua mensagem" class="form-control p-3 pl-4" required></textarea>
                 </div>
-            </div>
-            <div class="form-group">
-                <textarea name="" id="" cols="30" rows="8" placeholder="Sua mensagem" class="form-control p-3 pl-4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-lg btn-light d-block mt-4">Enviar</button>
-        </form>
+                <button type="submit" class="btn btn-lg btn-light d-block mt-4">Enviar</button>
+            </form>
+            <p id="return-message" class="f-medium p-3 text-center"></p>
+        </div>
     </div>
 </section>
 <script src="<?= get_theme_file_uri('assets/js/particles.min.js') ?>"/></script>
 <script src="<?= get_theme_file_uri('assets/js/app.js') ?>"/></script>
-<?php wp_footer(); ?>
 <?php get_footer(); ?>

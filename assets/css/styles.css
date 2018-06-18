@@ -31,7 +31,8 @@
   font-family: "Klavika-CH-regular", Arial, Helvetica, sans-serif; }
 
 body {
-  background-color: #1f1f1f; }
+  background-color: #1f1f1f;
+  color: #ffffff; }
 
 .hr-50 {
   background-color: #ffffff;
@@ -70,6 +71,10 @@ body {
     margin: auto;
     transform: rotate(0); } }
 
+.navbar-brand img {
+  width: 60px;
+  height: 50px; }
+
 .form-megusta input[type="text"], .form-megusta textarea {
   border-radius: 3rem;
   border: 0.3rem solid #ffffff;
@@ -88,6 +93,11 @@ body {
   .form-megusta button:hover {
     background-color: #b3b3b3; }
 
+#return-message {
+  background-color: #f29224;
+  display: none;
+  color: #000000; }
+
 footer {
   background-color: #000000; }
   footer:after {
@@ -95,3 +105,23 @@ footer {
     display: block;
     background-color: #ffb100;
     height: 0.5rem; }
+
+.posts .posts-link {
+  outline: none;
+  color: #ffffff;
+  font-size: 1.3rem; }
+
+.posts .post-categories {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem; }
+  .posts .post-categories li {
+    display: inline-block; }
+    .posts .post-categories li::after {
+      content: ","; }
+    .posts .post-categories li:last-child:after {
+      content: "."; }
+    .posts .post-categories li a {
+      outline: none;
+      color: #f29224;
+      font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif; }

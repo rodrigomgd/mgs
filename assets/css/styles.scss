@@ -3,6 +3,7 @@
 
 body{
     background-color: $cor-bg-1;
+    color: $branco;
 }
 
 .hr-50{
@@ -49,6 +50,15 @@ body{
     }
 }
 
+// NAVBAR
+
+.navbar-brand{
+    img{
+        width: 60px;
+        height: 50px;
+    }
+}
+
 //FORM STYLES
 .form-megusta{
     
@@ -75,6 +85,12 @@ body{
     }
 }
 
+#return-message{
+    background-color: $laranja;
+    display: none;
+    color: $preto
+;}
+
 footer{
     background-color: $preto;
 
@@ -83,5 +99,35 @@ footer{
         display: block;
         background-color: $amarelo-footer;
         height:0.5rem;
+    }
+}
+
+//POSTS
+.posts {
+    .posts-link {
+        outline: none;
+        color: $branco;
+        font-size: 1.3rem;
+    }
+
+    .post-categories {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 1rem;
+        li {
+            display: inline-block;
+
+            &::after {
+                content: ",";
+            }
+            &:last-child:after {
+                content: ".";
+            }
+            a{
+                outline: none;
+                color:$laranja;
+                font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif;
+            }
+        }    
     }
 }
