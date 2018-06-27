@@ -11,17 +11,38 @@
 </head>
 <body>
 
+<?php if(!is_front_page()): ?>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-megusta">
+    <a class="navbar-brand" href="<?php echo site_url() ?> "><img src="<?= get_theme_file_uri('assets/img/short-logo.png') ?>" alt="Logo reduzido Me Gusta Digital" class="img-fluid"></a>
 
-<nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><img src="<?= get_theme_file_uri('assets/img/short-logo.png') ?>" alt="Logo reduzido Me Gusta Digital" class="img-fluid"></a>
-   <?php get_search_form(); ?>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <?php wp_nav_menu(['menu'=>'menu home', 'menu_class' => 'navbar-nav mr-auto' ]) ?> 
-  </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <?php wp_nav_menu(['menu'=>'menu home', 'menu_class' => 'navbar-nav m-auto' ]) ?>
+        <?php get_search_form(); ?>
+    </div>
 </nav>
+<?php endif; ?>
+
+
+<div class="container-fluid pt-5 pb-5 white-text position-relative">
+    <div id="particles-js"></div>
+    <div class="row pt-5 pb-5 justify-content-around">
+        <div class="col-md-6 col-lg-5 p-5">
+            <a href="<?php echo site_url() ?>"> <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" class="img-fluid" alt="Logo Megusta Digital"></a>
+        </div>
+        <div class="header-social-links">
+            <span>social-links</span> 
+            <hr class="hr-50" > 
+            <ul class="list-inline">
+                <li class= "list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/facebook.png') ?>" alt=""></a></li>
+                <li class= "list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/instagram.png') ?>" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 
 

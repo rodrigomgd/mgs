@@ -1,51 +1,33 @@
-<?php
-/**
- * The template for displaying all single posts and attachments
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<section class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-7 col-10">
+            <?php if(have_posts()): while(have_posts()): the_post(); ?>
+            <article <?php post_class("row pl-3 posts d-block"); ?> >
+               
+               <?php if(has_post_thumbnail()) { ?>
+                  <a href=" <?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'large', array("class" => "img-fluid m-auto d-block") ); ?> </a>
+              <?php } else {
+                    echo "Sem imagem."; 
+                } ?>
+                <a class="f-bold posts-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+                <?php the_category(); ?>
 
-	<div id="primary" class="container">
-		<main id="main" class="site-main" role="main">
+                <div class="f-medium">
+                    <?php the_content(); ?>
+                </div>
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) :
-			the_post();
-
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-			// Previous/next post navigation.
-			the_post_navigation(
-				array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-				)
-			);
-
-			// End the loop.
-		endwhile;
-		?>
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+            </article>
+            <?php endwhile; ?>
+                <div class="pt-3">
+                    <div class="nav-previous alignleft"><?php next_posts_link( 'Post Anterior' ); ?></div>
+                    <div class="nav-next alignright"><?php previous_posts_link( 'Próximo Post' ); ?></div>
+                </div>
+            <?php endif; ?>
+        
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>

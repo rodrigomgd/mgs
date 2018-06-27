@@ -30,6 +30,26 @@
 .f-regular {
   font-family: "Klavika-CH-regular", Arial, Helvetica, sans-serif; }
 
+.bg-1 {
+  background-color: #1f1f1f;
+  color: #ffffff; }
+
+.bg-2 {
+  background-color: #a1a1a1;
+  color: #000000; }
+
+.bg-3 {
+  background-color: #f29224;
+  color: #ffffff; }
+
+.bg-4 {
+  background-color: #ffffff;
+  color: #000000; }
+
+.bg-5 {
+  background-color: #ffb100;
+  color: #ffffff; }
+
 body {
   background-color: #1f1f1f;
   color: #ffffff; }
@@ -74,6 +94,21 @@ body {
 .navbar-brand img {
   width: 60px;
   height: 50px; }
+
+.navbar-megusta {
+  font-family: "Klavika-M-italic";
+  font-size: 1.16rem; }
+  .navbar-megusta .navbar-collapse .navbar-nav li a {
+    color: #ffffff;
+    padding: 0.5rem;
+    text-decoration: none; }
+  .navbar-megusta .navbar-collapse .searchform input[type="text"] {
+    padding: 0.5rem;
+    margin-left: 0.5rem; }
+  .navbar-megusta .navbar-collapse .searchform .screen-reader-text {
+    display: none; }
+  .navbar-megusta .navbar-collapse .searchform #searchsubmit {
+    display: none; }
 
 .form-megusta input[type="text"], .form-megusta textarea {
   border-radius: 3rem;
@@ -125,3 +160,11 @@ footer {
       outline: none;
       color: #f29224;
       font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif; }
+
+.size-full {
+  height: auto;
+  max-width: 770px;
+  width: 100%; }
+
+.aligncenter {
+  text-align: center; }

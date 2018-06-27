@@ -1,0 +1,21 @@
+@mixin bg-color($bg , $color: $preto) {
+    background-color: $bg;
+    color: $color;
+}
+
+.bg-1{
+    @include bg-color($cor-bg-1,$branco);
+}
+.bg-2{
+    @include bg-color($cinza);
+}
+.bg-3{
+    @include bg-color($laranja,$branco);
+}
+.bg-4{
+    @include bg-color($branco);
+}
+.bg-5{
+    @include bg-color($amarelo-footer, $branco);
+}
+

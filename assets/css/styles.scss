@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'fonts';
+@import 'bg';
 
 body{
     background-color: $cor-bg-1;
@@ -56,6 +57,34 @@ body{
     img{
         width: 60px;
         height: 50px;
+    }
+}
+
+.navbar-megusta{
+    font-family: "Klavika-M-italic";
+    font-size: 1.16rem;
+    .navbar-collapse{
+        .navbar-nav{
+            li{
+                a{
+                    color: $branco;
+                    padding: 0.5rem;
+                    text-decoration: none;
+                }
+            }
+        }
+        .searchform{
+            input[type="text"]{
+                padding: 0.5rem;
+                margin-left: 0.5rem;
+            }
+            .screen-reader-text{
+                display: none;
+            }
+            #searchsubmit{
+                display: none;
+            }
+        }
     }
 }
 
@@ -130,4 +159,15 @@ footer{
             }
         }    
     }
+}
+
+// IMAGES
+
+.size-full{
+    height: auto;
+    max-width: 770px;
+    width: 100%;
+}
+.aligncenter{
+    text-align: center;
 }
