@@ -131,3 +131,8 @@ particlesJS('particles-js',
   }
 
 );
+
+$('.btn-sidebar').click((e)=>{
+  $('.btn-sidebar').toggleClass('btn-rotate');
+  $('.sidebar').toggleClass('sidebar-openned');
+})

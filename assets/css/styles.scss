@@ -74,15 +74,20 @@ body{
             }
         }
         .searchform{
+            position: absolute;
+            right: 1rem;
             input[type="text"]{
                 padding: 0.5rem;
                 margin-left: 0.5rem;
             }
-            .screen-reader-text{
-                display: none;
-            }
             #searchsubmit{
                 display: none;
+            }
+        }
+        @media(max-width:991px){
+            .searchform{
+                position: relative;
+                padding-left: 1.5rem;
             }
         }
     }
@@ -170,4 +175,42 @@ footer{
 }
 .aligncenter{
     text-align: center;
+}
+
+//sidebar
+.sidebar{
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn-sidebar{
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 50%;
+    opacity: 0.7;
+    border: 1px solid $branco;
+    z-index: 100;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: $branco;
+    transition: 0.2s;
+}
+
+.btn-rotate{
+    transform: rotate(180deg);
+}
+@media(max-width:767px){
+
+    .btn-sidebar{
+        display: block;
+    }
+    .sidebar{
+        position: absolute;
+        z-index: 50;
+        right: -100%;
+    }
+}
+.sidebar-openned{
+    right: 0;
 }
