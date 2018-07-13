@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<?php if(!is_front_page()): ?>
+
 <nav class="navbar navbar-expand-lg navbar-dark navbar-megusta">
     <a class="navbar-brand" href="<?php echo site_url() ?> "><img src="<?= get_theme_file_uri('assets/img/short-logo.png') ?>" alt="Logo reduzido Me Gusta Digital" class="img-fluid"></a>
 
@@ -23,8 +23,6 @@
         <?php get_search_form(); ?>
     </div>
 </nav>
-<?php endif; ?>
-
 
 <div class="container-fluid pt-5 pb-5 white-text position-relative">
     <div id="particles-js"></div>

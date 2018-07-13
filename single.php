@@ -20,12 +20,12 @@
                 <a class="f-bold posts-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
                 <?php the_category(); ?>
 
-                <div class="f-medium">
+                <div class="f-regular">
                     <?php the_content(); ?>
                 </div>
 
             </article>
-            <div class="f-light text-center posts-link">
+            <div class="f-light text-center posts-link pb-3">
                 <?php the_post_navigation(array(
                     'screen_reader_text' => "Leia mais:"
                 ));?> 

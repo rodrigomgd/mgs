@@ -18,19 +18,18 @@
 
             </article>
             <?php endwhile; endif; ?>
-            
-            <div class="pt-3">
-                <?php the_posts_pagination( array(
-                        'screen_reader_text' => "  ",
-                        'mid_size' => 5,
-                        'prev_text' => __( 'Anterior', 'textdomain' ),
-                        'next_text' => __( 'Próximo', 'textdomain' ),
-                    ) ); ?>
-            </div>
         </div>
         <div class="col-md-5 col-lg-3 sidebar bg-1">
             <?php get_sidebar(); ?>
         </div>
+    </div>       
+    <div class="container pt-3 pb-3">
+        <?php the_posts_pagination( array(
+                'screen_reader_text' => "  ",
+                'mid_size' => 5,
+                'prev_text' => __( 'Anterior', 'textdomain' ),
+                'next_text' => __( 'Próximo', 'textdomain' ),
+            ) ); ?>
     </div>
     <button class="btn-sidebar"><img src="<?php echo get_template_directory_uri().'/assets/img/arrow.png' ?>" alt="botao sidebar"></button>
 </section>

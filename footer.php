@@ -3,12 +3,12 @@
         <div class="col-5 col-md-2"><a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('assets/img/logo.png') ?>" alt="Logo agencia Me gusta digital" class="img-fluid"></a></div>
         <div class="col-6 col-md-3">
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/facebook.png') ?>" alt="logo-facebook-link" class="img-fluid"></a></li>
-                <li class="list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/instagram.png') ?>" alt="logo-instagram-link" class="img-fluid"></a></li>
-                <li class="list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/linkedin.png') ?>" alt="logo-linkedin-link" class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="http://fb.com/agenciamegusta"><img src="<?php echo get_theme_file_uri('assets/img/facebook.png') ?>" alt="logo-facebook-link" class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="http://instagr.am/agenciamegusta/"><img src="<?php echo get_theme_file_uri('assets/img/instagram.png') ?>" alt="logo-instagram-link" class="img-fluid"></a></li>
+                <li class="list-inline-item"><a href="http://linkedin.com/company/me-gusta-propaganda-e-novas-possibilidades"><img src="<?php echo get_theme_file_uri('assets/img/linkedin.png') ?>" alt="logo-linkedin-link" class="img-fluid"></a></li>
             </ul>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-2">
             <p class="text-muted pt-3">
             &#169 Agência Me Gusta Digital
             </p>

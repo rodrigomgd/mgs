@@ -1,13 +1,10 @@
+<?php /* Template Name: Digital Front-Page */ ?>
 <?php get_header(); ?>
 
     <section class="container pt-5">
         <div class="row text-center f-light">
             <p class="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, explicabo beatae facere nihil aliquam ullam quibusdam sunt perspiciatis impedit soluta odit sequi asperiores voluptatum modi, praesentium rem nemo neque repellat!Iste laudantium nihil aspernatur pariatur laboriosam harum doloribus deleniti laborum minus eaque consectetur voluptatibus quas perferendis, impedit totam fuga odio! Ullam quas aut tempora expedita distinctio nulla debitis cum quod!
-            </p>
-            <p class="lead text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, iure! Similique provident soluta, cupiditate dolorem, consequuntur libero repudiandae maxime, nemo repellendus maiores fuga. Culpa beatae quo architecto facere itaque pariatur!Omnis aliquid ut maxime nobis in, quam vel cupiditate magnam veritatis et, voluptas molestiae quis harum minima quas provident aperiam? Possimus a asperiores animi molestiae, ex et nobis voluptas laboriosam?
-            </p>
+            A Me Gusta Digital é um braço criativo de soluções web para marcas, criando desde soluções pontuais e funcionais a estratégias complexas com o objetivo de promover melhores resultados e maior visibilidade ao cliente no meio digital. Precisa de ajuda em um projeto ou campanha? <a href="<?php echo site_url('/contato') ?>">Entre em contato!</a></p>
         </div>
     </section>
 
@@ -37,7 +34,7 @@
                     
                     <div class="col-md-4 col-10 mb-4">
                     <?php	if ( has_post_thumbnail( $recent["ID"])) {
-                            echo  get_the_post_thumbnail($recent["ID"],'large',array("class" => "img-fluid"));
+                            echo "<a href='".get_permalink($recent['ID'])."'>".get_the_post_thumbnail($recent["ID"],'large',array("class" => "img-fluid"))."</a>";
                             }else{ echo "Sem imagem.";} ?>
                                 <?php the_category(); ?>
                                 <a class="f-bold posts-link" href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a>
@@ -57,27 +54,6 @@
         </div>
     </section>
 
-    <section class="container mb-5">
-        <h3 class="text-center f-medium pb-4">Entre em contato</h3>
-        <div class="row">
-            <div class="col-8 offset-2">
-                <form action="<?php echo get_theme_file_uri('mail.php') ?>" method="post" class="form-megusta f-light">
-                    <div class="row pb-3">
-                        <div class="col-sm mb-3">
-                            <input type="text" name="name" class="form-control p-3 pl-4" placeholder="Nome" required>
-                        </div>
-                        <div class="col-sm mb-3">
-                            <input type="text" name="email" class="form-control p-3 pl-4" placeholder="E-mail" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="" name="message" cols="30" rows="8" placeholder="Sua mensagem" class="form-control p-3 pl-4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-lg btn-light d-block mt-4">Enviar</button>
-                </form>
-                <p id="return-message" class="f-medium p-3 text-center"></p>
-            </div>
-        </div>
-    </section>
+    <?php get_template_part( 'content' , 'contato' ) ?>
 
 <?php get_footer(); ?>

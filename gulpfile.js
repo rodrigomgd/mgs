@@ -8,7 +8,8 @@ const autoprefixer = require('gulp-autoprefixer'),
       runSequence = require('run-sequence'),
       uglify = require('gulp-uglify-es').default,
       browserSync = require('browser-sync').create(),
-      image = require('gulp-image'),
+      imagemin = require('gulp-imagemin'),
+      imageminPngQuant = require('imagemin-pngquant'),
       args = ['**/*.php','**/assets/css/*.css','**/assets/js/*.js'];
 
 const AUTOPREFIXER_BROWSERS = [
@@ -30,20 +31,20 @@ gulp.task('serve',() => {
     gulp.watch(args).on('change',browserSync.reload);
 });
 
-gulp.task('images', function () {
-    gulp.src('assets/img/*')
-        .pipe(image())
-        .pipe(gulp.dest('dist/img'));
-    });
+gulp.task('images', () =>
+    gulp.src(['assets/img/*','/*'])
+        .pipe(imagemin([imageminPngQuant()]))
+        .pipe(gulp.dest('dist/assets/img'))
+);
 
-gulp.task('styles', () =>{
-    return gulp.src('assets/css/*.css')
-      // Auto-prefix css styles for cross browser compatibility
-      .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
-      // Minify the file
-      .pipe(csso())
-      // Output
-      .pipe(gulp.dest('dist/css'))
+gulp.task('styles', () => {
+  return gulp.src('assets/css/*.css')
+    // Auto-prefix css styles for cross browser compatibility
+    .pipe(autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
+    // Minify the file
+    .pipe(csso())
+    // Output
+    .pipe(gulp.dest('dist/assets/css'))
 });
 
 gulp.task('scripts', () => {
@@ -51,38 +52,38 @@ gulp.task('scripts', () => {
       // Minify the file
       .pipe(uglify())
       // Output
-      .pipe(gulp.dest('dist/js'))
+      .pipe(gulp.dest('dist/assets/js'))
   });
 
   // Gulp task to minify HTML files
-gulp.task('pages', () => {
-   return gulp.src(['./*.php','!./template-parts'])
-      .pipe(htmlmin({
-        collapseWhitespace: true,
-        removeComments: true
-      }))
-      .pipe(gulp.dest('dist'));
-  });
+  gulp.task('pages-1', () => {
+    return gulp.src(['./*.php','!./functions.php'])
+       .pipe(htmlmin({
+         collapseWhitespace: true,
+         removeComments: true
+       }))
+       .pipe(gulp.dest('dist'));
+   });
 
 gulp.task('pages-2', () => {
-   return gulp.src('./template-parts')
+   return gulp.src('./page-templates/*.php')
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
       }))
-      .pipe(gulp.dest('dist/template-parts'));
+      .pipe(gulp.dest('dist/page-templates'));
   });
 
   // Clean output directory
 gulp.task('clean', () => del(['dist']));
 
 // Gulp task to minify all files
-gulp.task('default', ['clean'], () => {
+gulp.task('default', () => {
   runSequence(
+    'images',
     'styles',
     'scripts',
-    'pages',
-    'pages-2',
-    'images'
+    'pages-1',
+    'pages-2'
   );
 });
