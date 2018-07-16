@@ -41,7 +41,7 @@
                                 </div>
                                 <a class="f-bold posts-link" href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a>
                                 <p class="f-medium"><?php echo wp_trim_words( $recent['post_content'], 30); ?></p>
-                                <p class="text-muted f-medium"><?php echo get_the_author($recent['ID']); echo ", ".get_the_date('M Y',$recent['ID']); ?></p>
+                                <p class="text-muted f-medium"><?php echo get_the_author().", ".get_the_date('M Y',$recent['ID']); ?></p>
                     </div>
                 <?php endforeach; wp_reset_query(); ?>
             </div>
