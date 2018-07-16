@@ -30,18 +30,20 @@
                 <?php
                     $args = array( 'numberposts' => '6' );
                     $recent_posts = wp_get_recent_posts( $args ); 
-                    foreach( $recent_posts as $recent ): the_post(); ?>
+                    foreach( $recent_posts as $recent ): ?>
                     
                     <div class="col-md-4 col-10 mb-4">
-                    <?php	if ( has_post_thumbnail( $recent["ID"])) {
-                            echo "<a href='".get_permalink($recent['ID'])."'>".get_the_post_thumbnail($recent["ID"],'large',array("class" => "img-fluid"))."</a>";
+                    <?php	if ( has_post_thumbnail( $recent['ID'])) {
+                            echo "<a href='".get_permalink($recent['ID'])."'>".get_the_post_thumbnail($recent['ID'],'large',array("class" => "img-fluid"))."</a>";
                             }else{ echo "Sem imagem.";} ?>
-                                <?php the_category(); ?>
+                                <div class="post-categories">
+                                    <?php echo get_the_category_list(', ', '', $recent["ID"] ); ?>
+                                </div>
                                 <a class="f-bold posts-link" href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a>
-                                <?php the_excerpt(array("class" => "f-medium")); ?>
-                                <p class="text-muted f-medium"><?php the_author() ?>, <?php the_date('M Y') ?></p>
+                                <p class="f-medium"><?php echo wp_trim_words( $recent['post_content'], 30); ?></p>
+                                <p class="text-muted f-medium"><?php echo get_the_author($recent['ID']); echo ", ".get_the_date('M Y',$recent['ID']); ?></p>
                     </div>
-                <?php endforeach; wp_reset_query() ?>
+                <?php endforeach; wp_reset_query(); ?>
             </div>
         </div>
     </section>

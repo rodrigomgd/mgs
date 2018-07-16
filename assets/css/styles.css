@@ -135,8 +135,9 @@ body {
 
 #return-message {
   background-color: #f29224;
-  display: none;
-  color: #000000; }
+  border-radius: 3rem;
+  color: #000000;
+  display: none; }
 
 footer {
   background-color: #000000; }
@@ -155,6 +156,10 @@ footer {
   list-style-type: none;
   padding-left: 0;
   margin-top: 1rem; }
+  .posts .post-categories a {
+    outline: none;
+    color: #f29224;
+    font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif; }
   .posts .post-categories li {
     display: inline-block; }
     .posts .post-categories li::after {

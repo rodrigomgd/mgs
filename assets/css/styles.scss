@@ -121,9 +121,10 @@ body{
 
 #return-message{
     background-color: $laranja;
+    border-radius: 3rem;
+    color: $preto;
     display: none;
-    color: $preto
-;}
+}
 
 footer{
     background-color: $preto;
@@ -148,6 +149,11 @@ footer{
         list-style-type: none;
         padding-left: 0;
         margin-top: 1rem;
+        a {
+            outline: none;
+            color:$laranja;
+            font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif;
+        }
         li {
             display: inline-block;
 
@@ -157,7 +163,7 @@ footer{
             &:last-child:after {
                 content: ".";
             }
-            a{
+            a {
                 outline: none;
                 color:$laranja;
                 font-family: "Klavika-L-italic",Arial, Helvetica, sans-serif;

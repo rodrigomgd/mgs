@@ -12,6 +12,8 @@
                 <a class="f-bold posts-link" href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
                 <?php the_category(); ?>
 
+                <p class="text-muted f-medium"><?php the_author(); echo ", "; the_date('M Y'); ?></p>
+                
                 <div class="f-medium">
                     <?php the_excerpt(); ?>
                 </div>
