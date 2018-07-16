@@ -1,13 +1,13 @@
 <section id="contato" class="container pt-3 mb-5">
         <h3 class="text-center f-medium pb-4">Entre em contato</h3>
-        <div class="row">
-            <div class="col-8 offset-2">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-12">
                 <form action="<?php echo get_theme_file_uri('mail.php') ?>" method="post" class="form-megusta f-light">
                     <div class="row pb-3">
-                        <div class="col-sm mb-3">
+                        <div class="col-md col-12 mb-3">
                             <input type="text" name="name" class="form-control p-3 pl-4" placeholder="Nome" required>
                         </div>
-                        <div class="col-sm mb-3">
+                        <div class="col-md col-12 mb-3">
                             <input type="text" name="email" class="form-control p-3 pl-4" placeholder="E-mail" required>
                         </div>
                     </div>
