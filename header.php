@@ -34,8 +34,8 @@
             <span>social-links</span> 
             <hr class="hr-50" > 
             <ul class="list-inline">
-                <li class= "list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/facebook.png') ?>" alt=""></a></li>
-                <li class= "list-inline-item"><a href="#"><img src="<?php echo get_theme_file_uri('assets/img/instagram.png') ?>" alt=""></a></li>
+                <li class= "list-inline-item"><a href="http://fb.com/agenciamegusta"><img src="<?php echo get_theme_file_uri('assets/img/facebook.png') ?>" alt=""></a></li>
+                <li class= "list-inline-item"><a href="http://instagr.am/agenciamegusta/"><img src="<?php echo get_theme_file_uri('assets/img/instagram.png') ?>" alt=""></a></li>
             </ul>
         </div>
     </div>
