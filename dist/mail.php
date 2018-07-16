@@ -21,11 +21,11 @@ $message = $_POST['message'];
 	
 // Create the email and send the message
 $to = 'rodrigo@megustadigital.com.br'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_body = "<b>Detalhes:</b> <br> Nome: ".$name."<br> <b>Assunto:</b> ".$sub."<br> <b>Telefone:</b> ".$phone." <br> <b>Email:</b>".$email_address." <br> <b>Mensagem:</b> ".$message;
+$email_body = "<b>Detalhes:</b> <br> Nome: ".$name."<br> <b>Email:</b> ".$email_address." <br> <b>Mensagem:</b> ".$message;
 
 $headers .= "Content-Type: text/html; charset=UTF-8 \r\n";
 $headers .= "From: naoresponda@megusta.com.br\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Responda para: $email_address";	
+$headers .= "Responda para:".$email_address."\n\n";	
 @mail($to,$email_subject,$email_body,$headers);
 echo json_encode(array(
     "status" => true
