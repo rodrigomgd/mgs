@@ -1,11 +1,11 @@
 <section class="container-fluid mt-5">
     <div class="row justify-content-around">
-        <div class="col-lg-7 col-md-7 col-10">
+        <div class="col-lg-6 col-md-7 col-10">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <article <?php post_class("row pl-3 posts d-block"); ?> >
                
                <?php if(has_post_thumbnail()) { ?>
-                  <a href=" <?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'large', array("class" => "img-fluid m-auto d-block") ); ?> </a>
+                  <a class="d-block mb-3" href=" <?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'large', array("class" => "img-fluid m-auto d-block") ); ?> </a>
               <?php } else {
                     echo "Sem imagem."; 
                 } ?>
@@ -14,7 +14,7 @@
 
                 <p class="text-muted f-medium"><?php the_author(); echo ", "; the_date('M Y'); ?></p>
                 
-                <div class="f-medium">
+                <div class="f-medium text-justify">
                     <?php the_excerpt(); ?>
                 </div>
 

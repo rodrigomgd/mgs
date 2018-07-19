@@ -36,11 +36,11 @@
                     <?php	if ( has_post_thumbnail( $recent['ID'])) {
                             echo "<a href='".get_permalink($recent['ID'])."'>".get_the_post_thumbnail($recent['ID'],'large',array("class" => "img-fluid"))."</a>";
                             }else{ echo "Sem imagem.";} ?>
-                                <div class="post-categories">
+                                <div class="post-categories pb-2">
                                     <?php echo get_the_category_list(', ', '', $recent["ID"] ); ?>
                                 </div>
                                 <a class="f-bold posts-link" href="<?php echo get_permalink($recent['ID']) ?>"><?php echo $recent['post_title'] ?></a>
-                                <p class="f-medium"><?php echo wp_trim_words( $recent['post_content'], 30); ?></p>
+                                <p class="f-medium pb-3 pt-3"><?php echo wp_trim_words( $recent['post_content'], 30); ?></p>
                                 <p class="text-muted f-medium"><?php the_author_meta( 'display_name', $recent['post_author'] ); echo ", ".get_the_date('M Y',$recent['ID']); ?></p>
                     </div>
                 <?php endforeach; wp_reset_query(); ?>

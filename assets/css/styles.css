@@ -184,7 +184,9 @@ blockquote {
   width: 100%; }
 
 .aligncenter {
-  text-align: center; }
+  text-align: center;
+  display: block;
+  margin: 10px auto; }
 
 .sidebar {
   position: relative;
