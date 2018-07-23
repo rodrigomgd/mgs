@@ -8,7 +8,7 @@
 ?>
 <section class="container-fluid mt-5">
     <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-7 col-md-8 col-10 w-1570">
+        <div class="col-xl-6 col-lg-7 col-md-8 col-10 w-770">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
             <article <?php post_class("row posts d-block"); ?> >
                
