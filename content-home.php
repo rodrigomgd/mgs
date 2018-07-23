@@ -1,8 +1,8 @@
 <section class="container-fluid mt-5">
     <div class="row justify-content-around">
-        <div class="col-lg-6 col-md-7 col-10">
+        <div class="col-lg-5 col-md-7 col-10">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
-            <article <?php post_class("row pl-3 posts d-block"); ?> >
+            <article <?php post_class("row posts d-block"); ?> >
                
                <?php if(has_post_thumbnail()) { ?>
                   <a class="d-block mb-3" href=" <?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'large', array("class" => "img-fluid m-auto d-block") ); ?> </a>

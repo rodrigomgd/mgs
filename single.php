@@ -8,9 +8,9 @@
 ?>
 <section class="container-fluid mt-5">
     <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-7 col-md-8 col-10">
+        <div class="col-xl-6 col-lg-7 col-md-8 col-10 w-1570">
             <?php if(have_posts()): while(have_posts()): the_post(); ?>
-            <article <?php post_class("row pl-3 posts d-block"); ?> >
+            <article <?php post_class("row posts d-block"); ?> >
                
                <?php if(has_post_thumbnail()) { ?>
                   <a class="d-block mb-3" href=" <?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'large', array("class" => "img-fluid m-auto d-block") ); ?> </a>

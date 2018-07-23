@@ -32,6 +32,10 @@ body{
     color: $branco;
 }
 
+.w-1570{
+    max-width: 1570px !important; 
+}
+
 .header-social-links{
     display: inline-flex;
     justify-content: space-around;
@@ -187,12 +191,21 @@ blockquote{
     max-width: 770px;
     width: 100%;
 }
-.aligncenter{
-    text-align: center;
-    display: block;
-    margin: 10px auto;
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+.alignleft {
+	float: left;
+	margin: 0.5em 1em 0.5em 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0.5em 0 0.5em 1em;
+}
 //sidebar
 .sidebar{
     position: relative;
