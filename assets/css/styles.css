@@ -136,6 +136,20 @@ body {
   .form-megusta button:hover {
     background-color: #b3b3b3; }
 
+.searchform input[type="text"] {
+  border-radius: 3rem;
+  border: 0.2rem solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding-left: 1rem; }
+  .searchform input[type="text"]:focus, .searchform input[type="text"]::placeholder {
+    background-color: transparent;
+    color: #ffffff; }
+
+.searchform input[type="submit"] {
+  display: none; }
+
 #return-message {
   background-color: #f29224;
   border-radius: 3rem;
@@ -158,7 +172,7 @@ footer {
 .posts .post-categories {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 1rem; }
+  margin: 0; }
   .posts .post-categories a {
     outline: none;
     color: #f29224;

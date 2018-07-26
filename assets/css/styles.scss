@@ -123,6 +123,24 @@ body{
     }
 }
 
+.searchform{
+    input[type="text"]{
+        border-radius: 3rem;
+        border: 0.2rem solid $branco;
+        background-color: transparent;
+        color:$branco;
+        font-size: 1.3rem;
+        padding-left: 1rem;
+            &:focus,&::placeholder{
+                background-color: transparent;
+                color:$branco;
+            }
+    }
+    input[type="submit"]{
+        display: none;
+    }
+}
+
 #return-message{
     background-color: $laranja;
     border-radius: 3rem;
@@ -152,7 +170,7 @@ footer{
     .post-categories {
         list-style-type: none;
         padding-left: 0;
-        margin-top: 1rem;
+        margin: 0;
         a {
             outline: none;
             color:$laranja;
