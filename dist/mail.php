@@ -20,7 +20,7 @@ $email_subject = "Formulário de contato do site. Cliente: ".$name.".";
 $message = $_POST['message'];
 	
 // Create the email and send the message
-$to = 'digital@megusta.com.br'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to. // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$to = 'megustaagencia@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to. // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_body = "<b>Detalhes:</b> <br> <b>Nome:</b> ".$name."<br> <b>Email:</b> ".$email_address." <br> <b>Mensagem:</b> ".$message;
 
 $headers .= "Content-Type: text/html; charset=UTF-8 \r\n";
