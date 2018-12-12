@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section id="contato" class="container pt-3 mb-5">
         <h3 class="text-center f-medium pb-4">Entre em contato</h3>
         <div class="row justify-content-center">
@@ -14,6 +15,9 @@
                     <div class="form-group">
                         <textarea id="" name="message" cols="30" rows="8" placeholder="Sua mensagem" class="form-control p-3 pl-4" required></textarea>
                     </div>
+                   <div class="d-flex justify-content-center">
+                      <div class="g-recaptcha" data-sitekey="6LeZqWwUAAAAAA0UO6ilz6-NPl6l85EIpAJ-GPwS"></div>
+                   </div>
                     <button type="submit" class="btn btn-lg btn-light d-block mt-4">Enviar</button>
                 </form>
                 <p id="return-message" class="f-medium p-3 text-center"></p>

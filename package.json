@@ -1,12 +1,12 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.24.4",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^4.0.0",
-    "gulp-image": "^4.3.0",
+    "gulp-image": "^4.4.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-uglify-es": "^1.0.4",
     "imagemin-pngquant": "^5.1.0",
